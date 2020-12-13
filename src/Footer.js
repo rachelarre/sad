@@ -37,7 +37,7 @@ function Footer() {
         <div className="ft-right">
           Designed by
           <a
-            href="https://github.com/rachelarre"
+            href="https://rachelarre.com"
             target="_blank"
             rel="noreferrer"
             alt="Portfolio"

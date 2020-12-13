@@ -49,7 +49,7 @@ export class ImgMediaCard extends React.Component {
   setup(p5, canvasParentRef) {
     p5.createCanvas(480, 480).parent(canvasParentRef);
     p5.noStroke();
-    // p5.fill(255);
+    p5.clear();
   }
 
   draw(p5) {
@@ -64,8 +64,8 @@ export class ImgMediaCard extends React.Component {
     let variance = Math.min((lightLvl + tempLvl) / 24, 12);
 
     // make a x and y grid of ellipses
-    for (let x = 0; x <= width; x = x + variance * 2) {
-      for (let y = 0; y <= height; y = y + variance * 2) {
+    for (let x = 0; x <= width; x = x + 10) {
+      for (let y = 0; y <= height; y = y + 10) {
         // starting point of each circle depends on mouse position
         const xAngle = p5.map(
           lightLvl + variance,

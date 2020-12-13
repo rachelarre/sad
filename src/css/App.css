@@ -14,13 +14,22 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: linear-gradient(32.8deg, #d299c2 -25.89%, #fef9d7 125.89%);
   background-size: 200% 200%;
-  animation: gradient 15s ease infinite;
 }
 
 html,
 body {
   height: 100%;
   margin: 0;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #181632;
+}
+
+a:hover {
+  color: darkorchid;
 }
 
 .app {
@@ -110,16 +119,13 @@ footer {
 }
 
 .ft-icon-bar a {
-  padding-right: 24px;
+  padding: 12px;
 }
 
 .ft-right {
   display: flex;
   flex-direction: row;
-}
-
-.ft-right a {
-  padding-left: 8px;
+  padding: 4px;
 }
 
 /* Affective Display*/
