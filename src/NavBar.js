@@ -1,12 +1,14 @@
 import React from "react";
-import "./Navigation.css";
+import "./css/App.css";
 
 function NavBar() {
   return (
-    <nav className="navbar">
-      <p>[S][A][D]</p>
-      <p>Process</p>
-    </nav>
+    <header>
+      <nav className="navbar">
+        <div className="nav-links-left">[S][A][D]</div>
+        {/* <div className="nav-links-right">Process</div> */}
+      </nav>
+    </header>
   );
 }
 

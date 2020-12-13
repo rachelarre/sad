@@ -1,5 +1,5 @@
 import React from "react";
-import "./Navigation.css";
+import "./css/App.css";
 import Typography from "@material-ui/core/Typography";
 import MiniCard from "./MiniCard";
 import Grid from "@material-ui/core/Grid";

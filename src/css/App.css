@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Amiko:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(32.8deg, #d299c2 -25.89%, #fef9d7 125.89%);
+  background-size: 200% 200%;
+  animation: gradient 15s ease infinite;
+}
+
+/* Typography */
+* H1 {
+  font-family: Amiko;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 56px;
+  letter-spacing: -0.03em;
+  text-align: left;
+}
+
+* p {
+  font-family: Source Code Pro;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.03em;
+  text-align: left;
+}
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 10;
+  padding: 16px 32px;
+
+  font-size: 14px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 112%;
+  letter-spacing: -0.03em;
+}
+
+.nav-links-left {
+  display: flex;
+  width: 400px;
+}
+
+.nav-links-right {
+  display: flex;
+  width: 400px;
+  justify-content: flex-end;
+}
+
+.navbar p {
+  padding-right: 16px;
+}
+
+.logo img {
+  width: 80px;
+  vertical-align: middle;
+}
+
+/* Button */
+.btn-fill {
+  background-color: #181632;
+  color: white;
+  border: 1px solid #181632;
+  padding: 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  align-items: center;
+  text-align: center;
+}
+
+.btn-fill:hover {
+  filter: contrast(100%);
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  letter-spacing: 1px;
+}
+
+.btn-standard {
+  max-width: 180px;
+  letter-spacing: 0.5px;
+  font-size: 16px;
+}
+
+/* Flex */
+.section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 1200px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.mediablock {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.textblock {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  max-width: 480px;
+  min-width: 240px;
+  margin: 16px;
+  justify-content: center;
+}
+
+.spacing-md {
+  height: 64px;
+}
+
+/* Card UI */
+.card {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin: 16px;
+}
+
+.card-caption {
+  padding: 8px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.visualization-image {
+  margin-bottom: 8px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Text Spacing */
+.text-spacing {
+  padding-bottom: 16px;
+}

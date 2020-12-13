@@ -1,21 +1,18 @@
 import React from "react";
-import "./App.css";
+import "./css/App.css";
 import NavBar from "./NavBar";
-import Container from "@material-ui/core/Container";
-import Divider from "@material-ui/core/Divider";
 import AffectiveDisplay from "./AffectiveDisplay";
-import Process from "./Process";
+import Footer from "./Footer";
 
 function App() {
   return (
-    <Container maxWidth="lg">
-      <div className="App">
-        <NavBar />
-        <AffectiveDisplay />
-        <Divider light />
-        <Process />
-      </div>
-    </Container>
+    <div className="App">
+      <NavBar />
+      <div className="spacing-md"></div>
+      <AffectiveDisplay />
+      <div className="spacing-md"></div>
+      <Footer />
+    </div>
   );
 }
 
