@@ -6,13 +6,11 @@ import Footer from "./Footer";
 
 function App() {
   return (
-    <div className="App">
+    <section className="app">
       <NavBar />
-      <div className="spacing-md"></div>
       <AffectiveDisplay />
-      <div className="spacing-md"></div>
       <Footer />
-    </div>
+    </section>
   );
 }
 

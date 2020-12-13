@@ -8,7 +8,6 @@
 }
 
 body {
-  margin: 0;
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
   -webkit-font-smoothing: antialiased;
@@ -16,6 +15,33 @@ body {
   background: linear-gradient(32.8deg, #d299c2 -25.89%, #fef9d7 125.89%);
   background-size: 200% 200%;
   animation: gradient 15s ease infinite;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+nav {
+  width: 100%;
+  z-index: 10;
+  flex: 1;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex: 1 0 auto;
+  z-index: 10;
 }
 
 /* Typography */
@@ -41,12 +67,11 @@ body {
 
 /* Navigation Bar */
 .navbar {
-  display: flex;
   width: 100%;
   justify-content: space-between;
-  position: fixed;
   z-index: 10;
   padding: 16px 32px;
+  flex: 1;
 
   font-size: 14px;
   font-style: normal;
@@ -71,37 +96,33 @@ body {
   padding-right: 16px;
 }
 
-.logo img {
-  width: 80px;
-  vertical-align: middle;
+/* Footer */
+.ft-main {
+  padding: 1.25rem 1.875rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-/* Button */
-.btn-fill {
-  background-color: #181632;
-  color: white;
-  border: 1px solid #181632;
-  padding: 10px;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: 600;
-  align-items: center;
-  text-align: center;
+.ft-icon-bar {
+  display: flex;
+  flex-direction: row;
 }
 
-.btn-fill:hover {
-  filter: contrast(100%);
-  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
-  letter-spacing: 1px;
+.ft-icon-bar a {
+  padding-right: 24px;
 }
 
-.btn-standard {
-  max-width: 180px;
-  letter-spacing: 0.5px;
-  font-size: 16px;
+.ft-right {
+  display: flex;
+  flex-direction: row;
 }
 
-/* Flex */
+.ft-right a {
+  padding-left: 8px;
+}
+
+/* Affective Display*/
 .section {
   display: flex;
   flex-direction: row;
@@ -129,6 +150,31 @@ body {
 
 .spacing-md {
   height: 64px;
+}
+
+/* Button */
+.btn-fill {
+  background-color: #181632;
+  color: white;
+  border: 1px solid #181632;
+  padding: 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  align-items: center;
+  text-align: center;
+}
+
+.btn-fill:hover {
+  filter: contrast(100%);
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  letter-spacing: 1px;
+}
+
+.btn-standard {
+  max-width: 180px;
+  letter-spacing: 0.5px;
+  font-size: 16px;
 }
 
 /* Card UI */
