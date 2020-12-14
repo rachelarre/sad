@@ -4,6 +4,7 @@ import { ImgMediaCard } from "./ImageCard";
 
 function AffectiveDiplay() {
   return (
+    //Render the visualization and main content blocks
     <section className="content">
       <div className="section">
         <ImgMediaCard className="mediablock" />
@@ -14,7 +15,7 @@ function AffectiveDiplay() {
             A daily snap shot of the temperature and sunlight outside my window.
             It often hard to mark the passing of the seasons or realize how much
             daylight you have gotten in a day. I wanted to create an ambient way
-            to visualization the affective feeling of the weather.
+            to visualize the affective feeling of the weather.
           </p>
           <p className="text-spacing">
             This visualization uses data gathered from sensors connected to a

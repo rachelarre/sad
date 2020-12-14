@@ -2,6 +2,8 @@ import React from "react";
 import firebase from "firebase";
 import Sketch from "react-p5";
 
+//This componnent contains the bulk of the visualization logic
+
 const firebaseConfig = {
   apiKey: "AIzaSyDlV3dNGoi7Tbq0WC-6M0VpL7_NDRKzmuw",
   authDomain: "sad-visualization.firebaseapp.com",
@@ -12,7 +14,7 @@ const firebaseConfig = {
   appId: "1:788877370453:web:6302b5919df429e98860dc",
 };
 
-let t = 0; // time variable
+let t = 0; // visualization speed variable
 
 export class ImgMediaCard extends React.Component {
   constructor() {
@@ -26,6 +28,7 @@ export class ImgMediaCard extends React.Component {
   }
 
   componentDidMount() {
+    //get the data from Firebase when the page loads
     firebase.initializeApp(firebaseConfig);
     const database = firebase.database();
 
@@ -35,7 +38,7 @@ export class ImgMediaCard extends React.Component {
       .on("child_added", (snapshot) => {
         var data = snapshot.val();
         this.setState({ lightdata: data });
-      });
+      }); //when a new entry is added to the database update the state
 
     database
       .ref("temperature")
@@ -47,13 +50,14 @@ export class ImgMediaCard extends React.Component {
   }
 
   setup(p5, canvasParentRef) {
+    // create the canvas for the visualization
     p5.createCanvas(480, 480).parent(canvasParentRef);
     p5.noStroke();
     p5.clear();
   }
 
   draw(p5) {
-    const lightLvl = Number(this.state.lightdata.light);
+    const lightLvl = Number(this.state.lightdata.light); //grab the variables when the state is updated
     const tempLvl = Number(this.state.tempdata.temperature);
 
     let width = 480;
@@ -98,7 +102,7 @@ export class ImgMediaCard extends React.Component {
         p5.ellipse(myY, myX, 2); // draw particle
       }
     }
-    t = t + 0.0003; // update time
+    t = t + 0.0003; // update speed
   }
 
   render() {
@@ -114,6 +118,7 @@ export class ImgMediaCard extends React.Component {
       today.getMinutes();
 
     return (
+      //render the P5 elements on the card with data details
       <div className="card">
         <div className="visualization-image">
           <Sketch setup={this.setup} draw={this.draw} />
