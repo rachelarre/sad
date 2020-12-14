@@ -66,7 +66,7 @@ export class ImgMediaCard extends React.Component {
     // make a x and y grid of ellipses
     for (let x = 0; x <= width; x = x + 10) {
       for (let y = 0; y <= height; y = y + 10) {
-        // starting point of each circle depends on mouse position
+        // starting point of each circle depends on temperature and light
         const xAngle = p5.map(
           lightLvl + variance,
           0,
